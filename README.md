@@ -2,20 +2,20 @@
 
 ### Colors
 
-> black for titles
+* black for titles
   1. ```#20232a```
   2. ```rgb(40,44,52)```
 
-> black for texts
+* black for texts
   ```06050ad9```
 
-> background
+* background
   ```#f2f3f5```
 
-> selection
+* selection
   ```rgb(187, 239, 253)```
   
-> links
+* links
   ```#2c62c7```
 
 ### Fonts
