@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #20232a;
+  font-family: Poppins, Ubuntu, Lato, "Segoe UI", "Roboto", "Oxygen",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 50ms linear;
+}
+
+p {
+  color: #06050ad9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(40, 44, 52);
+}
+
+a {
+  color: #2c62c7;
+}
+
+a:hover {
+  color: #224891;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+button,
+input {
+  outline: 0;
+}
+
+body {
+  background: #f2f3f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+noscript {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+noscript p {
+  text-align: center;
+}
+
+*::selection {
+  background: rgb(187, 239, 253);
+  color: inherit;
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 87.5%;
+  }
+}
