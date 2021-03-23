@@ -18,6 +18,11 @@
 * links
   ```#2c62c7```
 
+* highlights
+  1. springgreen
+  2. #999
+
+
 ### Fonts
   1. Lato
   2. Poppins
