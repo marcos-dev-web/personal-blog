@@ -12,7 +12,7 @@
 * background
   ```#f2f3f5```
 
-* selection
+* selection & scrollbar
   ```rgb(187, 239, 253)```
   
 * links
@@ -21,6 +21,8 @@
 * highlights
   1. springgreen
   2. #999
+  3. #4c4cc7
+  4. #0d61fd
 
 
 ### Fonts

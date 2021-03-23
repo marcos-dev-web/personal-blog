@@ -1,6 +1,31 @@
 import styled from 'styled-components';
 
+import {Link as LinkRouter} from 'react-router-dom';
+
 const black = "rgb(40,44,52)";
+
+export const Link = styled(LinkRouter)`
+  color: white;
+
+  font-size: 1rem;
+  font-style: Lato;
+  text-decoration: none;
+
+  margin-right: 1rem;
+
+  transition: all 200ms linear;
+  user-select: none;
+
+  &:hover {
+    color: #999;
+  }
+  &:active {
+    color: springgreen;
+  }
+  ${({show}) => show === "true" ? `
+    margin-top: 1rem;
+  ` : null}
+`;
 
 export const Container = styled.header`
   display: flex;
@@ -50,7 +75,7 @@ export const Dot = styled.span`
   }
 `;
 
-export const Link = styled.a`
+export const A = styled.a`
   text-decoration: none;
 `;
 
@@ -73,29 +98,6 @@ export const Links = styled.nav`
       padding-bottom: 1rem;
     ` : null}; 
   }
-`;
-
-export const Item = styled.a`
-  color: white;
-
-  font-size: 1rem;
-  font-style: Lato;
-  text-decoration: none;
-
-  margin-right: 1rem;
-
-  transition: all 200ms linear;
-  user-select: none;
-
-  &:hover {
-    color: #999;
-  }
-  &:active {
-    color: springgreen;
-  }
-  ${({show}) => show && `
-    margin-top: 1rem;
-  `}
 `;
 
 export const Menu = styled.span`

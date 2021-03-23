@@ -10,6 +10,12 @@
   transition: all 50ms linear;
 }
 
+*,
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 p {
   color: #06050ad9;
 }
@@ -66,7 +72,22 @@ noscript p {
 
 *::selection {
   background: rgb(187, 239, 253);
-  color: inherit;
+  color: rgb(27, 29, 44);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(187, 239, 253);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(167, 212, 224);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
