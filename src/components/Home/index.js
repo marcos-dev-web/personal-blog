@@ -8,7 +8,7 @@ import PostsByTopic from "../../pages/PostsByTopic";
 import Trending from "../../pages/Trending";
 import NotFound from '../../pages/NotFound';
 
-import { Container, Logo, Dot, A, Links, Menu, Link } from "./styles";
+import { Container, Logo, Dot, Links, Menu, Link } from "./styles";
 
 function Home() {
   const MIN_WIDTH = 580;
@@ -43,11 +43,11 @@ function Home() {
   return (
     <BrowserRouter>
       <Container show={menuIsOpened}>
-        <A href="/">
+        <Link to="/">
           <Logo>
             Marcos<Dot>.</Dot>dev<Dot>.</Dot>web
           </Logo>
-        </A>
+        </Link>
         <Menu>
           {menuIsHidden && (
             <MenuIcon

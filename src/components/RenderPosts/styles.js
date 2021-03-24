@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-  width: 100vw;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   height: calc(100vh - 4rem);
   overflow: auto;
 `;
@@ -17,20 +19,24 @@ export const Box = styled.article`
 
 export const Header = styled.header`
   width: 100%;
+  max-width: 900px;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
+  margin: 0 auto;
   margin-bottom: 1.5rem;
 `;
 
 export const Title = styled.h1`
   font-family: Poppins, Ubuntu, sans-serif;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   font-size: 3rem;
   color: rgb(40,44,52);
+  max-width: 400px;
 `;
 
 export const Topic = styled(Link)`
@@ -46,6 +52,7 @@ export const Topic = styled(Link)`
   user-select: none;
   cursor: pointer;
   transition: all 100ms linear;
+  margin: 1rem 0;
 
   &:hover {
     color: #2c62c7;
@@ -82,9 +89,10 @@ export const NavLink = styled.a`
 `;
 
 export const BoxText = styled.section`
-  width: 100%;
+  width: fit-content;
   text-align: left;
   padding: 5px;
+  margin: 0 auto;
 `;
 
 export const Text = styled.p`
@@ -94,6 +102,8 @@ export const Text = styled.p`
   font-size: 1.3rem;
   line-height: 24px;
   margin-top: 1.5rem;
+  padding: 0 1rem;
+  max-width: 900px;
 `;
 
 export const TopicsList = styled.section`
@@ -123,5 +133,18 @@ export const TopicTitle = styled.section`
 
   & > h1 {
     color: white;
+  }
+`;
+
+export const Codes = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  & pre {
+    margin: 1rem;
+    overflow-y: hidden;
+    border-radius: 3px;
   }
 `;

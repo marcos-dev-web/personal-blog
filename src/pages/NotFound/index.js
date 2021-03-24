@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Container, Title, Link } from './style';
 
 function NotFound() {
-  document.body.style = 'overflow: hidden;'
+  useEffect(() => {
+    document.body.style = 'overflow: hidden;'
+    document.title = "Not Found"
+  }, [])
   return (
     <Container>
       <Title>Page Not Found</Title>

@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Footer from '../../components/Footer';
+import RenderPosts from '../../components/RenderPosts';
 
 import {posts, trendings} from '../../posts';
 
-import { Container, Box, Header, Title, Topic, BoxText, Text } from '../styles';
+import { Container, Title } from '../styles';
+
+import { Link } from 'react-router-dom';
 
 function Trending() {
+
+  useEffect(() => {
+    document.title = "Blog | Trending top"
+  }, [])
+
   let ps = [];
   
   if (trendings.length > 0) {
@@ -21,25 +29,13 @@ function Trending() {
 
   return ps.length > 0 ? (
     <Container>
-      <Title>Trendings</Title>
-      {ps.map((post, index) => (
-        <Box key={index}>
-          <Header>
-            <Title>{post.title}</Title>
-            <Topic href="/posts-by-topic">{post.topic}</Topic>
-          </Header>
-          <BoxText>
-            {post.texts.map((text, index) => (
-              <Text key={index}>{text}</Text>
-            ))}
-          </BoxText>
-        </Box>
-      ))}
+      <Title style={styles.title}>Trendings</Title>
+      <RenderPosts posts={ps}/>
       <Footer />
     </Container>
   ) : (
     <Container style={styles.container}>
-      <h1 style={styles.h1}>No Trendings visit <a href="/all-posts">All Posts</a></h1>
+      <h1 style={styles.h1}>No Trendings visit <Link to="/all-posts">All Posts</Link></h1>
     </Container>
   )
 }
@@ -52,6 +48,10 @@ const styles = {
   },
   h1: {
     textAlign: 'center'
+  },
+  title: {
+    paddingBottom: "1rem",
+    borderBottom: '1px solid gray'
   }
 }
 
