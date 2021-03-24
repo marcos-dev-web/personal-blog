@@ -12,11 +12,9 @@ export const posts = [
       `Ouvia falar muito que para começar a programar eu precisaria estudar primeiro, lógica de programação.
       Então fui em busca dessa tal lógica de programação, encontrei algo chamado portugol, e quem estava ensinando era um professor que admiro muito, Gustavo Guanabara, então fui ver esse conteúdo.`,
 
-      `Assisti algumas aulas, escrevi alguns algoritmos, mas eu não estava contente (eu costumo aprender muito rápido), então decide que não ia começar com lógica de programação, e sim logo com uma linguagem de programação.`,
+      `Assisti algumas aulas, escrevi alguns algoritmos, mas eu não estava contente (eu costumo aprender muito rápido), então decidi que não ia começar com lógica de programação, e sim, logo com uma linguagem de programação.`,
 
-      `Pesquisando, ouvi falar de uma linguagem chamada Python, fiquei muito curioso, e como não havia tido contato com qualquer coisa relacionada a programação a não ser o portugol.`,
-
-      `Fui pesquisar um local onde pudesse estudar, então procurando no YouTube encontrei um curso gratuito do Gustavo Guanabara, fui e fiz, e mesmo sem aprender primeiro a lógica de programação, eu consegui aprender a linguagem e junto a lógica de programação.`,
+      `Pesquisando, ouvi falar de uma linguagem chamada Python, fiquei muito curioso, e como não havia tido contato com qualquer coisa relacionada a programação a não ser o portugol, Fui pesquisar um local onde pudesse estudar, então procurando no YouTube encontrei um curso gratuito do Gustavo Guanabara, fui e fiz, e mesmo sem aprender primeiro a lógica de programação, eu consegui aprender a linguagem e junto a lógica de programação.`,
 
       `Agora você deve estar se perguntando, mas o tópico não era sobre ReactJS?
       E a resposta é sim! Mas pensei que seria interessante lhe falar como eu aprendi a primeira linguagem, para que você pudesse ter um contexto sobre mim.

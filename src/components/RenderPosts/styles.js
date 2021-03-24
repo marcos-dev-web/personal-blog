@@ -146,5 +146,19 @@ export const Codes = styled.div`
     margin: 1rem;
     overflow-y: hidden;
     border-radius: 3px;
+    width: min(500px, 100vw);
+    font-size: 1rem;
   }
+
+  & pre code {
+    font-size: 0.8rem;
+  }
+
+@media screen and (max-width: 400px) {
+  & pre code {
+    font-size: 0.6rem;
+    padding: 0;
+    margin: 0;
+  }
+}
 `;
