@@ -9,6 +9,10 @@
   transition: all 50ms linear;
 }
 
+html {
+  font-size: 93.75%;
+}
+
 *,
 html,
 body {
@@ -52,12 +56,10 @@ body {
 
 pre {
   display: block;
-  font-family: monospace;
   white-space: pre;
 }
 
 code {
-  white-space: pre;
   padding: 0.5rem;
   border-radius: 3px;
   background: initial;

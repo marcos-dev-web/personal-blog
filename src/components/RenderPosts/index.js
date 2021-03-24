@@ -28,7 +28,7 @@ export default function RenderPosts({posts, byTopic}) {
                 <Codes>
                   {
                     post.codes.map((code, indexCode) => (
-                      <SyntaxHighlighter language={code.language} style={dracula} key={indexCode}>
+                      <SyntaxHighlighter className="code" language={code.language} style={dracula} key={indexCode}>
                         {code.code}
                       </SyntaxHighlighter>
                     ))
