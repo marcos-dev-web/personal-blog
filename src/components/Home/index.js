@@ -1,8 +1,8 @@
 import React, { useEffect, Suspense, lazy } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
-
 import MenuIcon from "@material-ui/icons/Menu";
+
 import { Container, Logo, Dot, Links, Menu, Link } from "./styles";
 import Loading from '../../components/Loading';
 
@@ -14,7 +14,7 @@ const NotFound = lazy(() => import("../../pages/NotFound"));
 function Home() {
   const MIN_WIDTH = 580;
 
-  const state = useSelector(st => st);
+  const { menuIsHidden, menuIsOpened } = useSelector(state => state);
   const dispatch = useDispatch();
 
   function resetMenuState() {
@@ -30,6 +30,7 @@ function Home() {
       }
     })
   }
+  
   function toggleMenuHidden(bool) {
     dispatch({
       type: "TOGGLE_MENU",
@@ -41,7 +42,7 @@ function Home() {
   }
 
   function handleMenuIsOpen() {
-    if (state.menuIsOpened) {
+    if (menuIsOpened) {
       return toggleMenuOpen(false);
     } else {
       return toggleMenuOpen(true);
@@ -51,9 +52,9 @@ function Home() {
   function handleStateMenu(event) {
     let w = event.target.innerWidth;
 
-    if (w <= MIN_WIDTH && !state.menuIsHidden) {
+    if (w <= MIN_WIDTH && !menuIsHidden) {
       toggleMenuHidden(true);
-    } else if (w > MIN_WIDTH && state.menuIsHidden) {
+    } else if (w > MIN_WIDTH && menuIsHidden) {
       toggleMenuHidden(false);
       toggleMenuOpen(false);
     }
@@ -68,14 +69,14 @@ function Home() {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
-        <Container show={state.menuIsOpened}>
+        <Container show={menuIsOpened}>
           <Link to="/">
             <Logo>
               Marcos<Dot>.</Dot>dev<Dot>.</Dot>web
             </Logo>
           </Link>
           <Menu>
-            {state.menuIsHidden && (
+            {menuIsHidden && (
               <MenuIcon
                 fontSize="large"
                 cursor="pointer"
@@ -84,11 +85,11 @@ function Home() {
               />
             )}
           </Menu>
-          <Links show={state.menuIsOpened}>
-            <Link onClick={resetMenuState} show={state.menuIsOpened.toString()} to="/all-posts">
+          <Links show={menuIsOpened}>
+            <Link onClick={resetMenuState} show={menuIsOpened.toString()} to="/all-posts">
               All posts
             </Link>
-            <Link onClick={resetMenuState} show={state.menuIsOpened.toString()} to="/posts-by-topic">
+            <Link onClick={resetMenuState} show={menuIsOpened.toString()} to="/posts-by-topic">
               Post by Topic
             </Link>
           </Links>

@@ -5,7 +5,7 @@ import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import { Container, Box, Header, Title, Topic, BoxText, Text, Codes } from './styles';
 
-export default function RenderPosts({posts, byTopic}) {
+function RenderPosts({posts, byTopic}) {
 
   return (
     <Container>
@@ -42,3 +42,5 @@ export default function RenderPosts({posts, byTopic}) {
     </Container>
   );
 }
+
+export default RenderPosts;

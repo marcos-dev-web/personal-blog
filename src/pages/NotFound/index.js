@@ -7,6 +7,7 @@ function NotFound() {
     document.body.style = 'overflow: hidden;'
     document.title = "Not Found"
   }, [])
+  
   return (
     <Container>
       <Title>Page Not Found</Title>

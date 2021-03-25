@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import RenderPosts from '../../components/RenderPosts';
 
 import { Container, Title } from '../styles';
-import getPosts from '../../utils/getPosts';
 
 function Trending() {
-  const [posts, setPosts] = useState([]);
-  const [trendings, setTrendings] = useState([]);
+  const { posts, trendings } = useSelector(state => state.dataPosts);
 
   useEffect(() => {
     document.title = "Blog | Trending top"
-    async function fetchData() {
-      const {posts, trendings} = await getPosts();
-      setPosts(posts);
-      setTrendings(trendings);
-    }
-    fetchData();
   }, []);
 
   let ps = [];

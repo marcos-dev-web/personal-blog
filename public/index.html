@@ -45,9 +45,21 @@
     </noscript>
     <main id="root"></main>
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('worker.js').then(function(registration) {}, function(err) {}).catch(function(err) {});
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("worker.js")
+            .then(
+              function (registration) {
+                console.log('[+] worker registred.');
+              },
+              function (err) {
+                console.log(`[-] error in register work: ${err}`)
+              }
+            )
+            .catch(function (err) {
+              console.warn(`[-] error in register work: - ${err}`)
+            });
         });
       }
     </script>
