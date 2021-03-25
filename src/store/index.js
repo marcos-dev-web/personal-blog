@@ -3,6 +3,12 @@ import { createStore } from 'redux';
 const INITIAL_STATE = {
   menuIsHidden: false,
   menuIsOpened: false,
+  dataPosts: {
+    topics: [],
+    posts: [],
+    trendings: [],
+    fetched: false,
+  }
 };
 
 function menuState(state=INITIAL_STATE, action) {
@@ -24,6 +30,11 @@ function menuState(state=INITIAL_STATE, action) {
       return {
         ...state,
         menuIsOpened: false,
+      }
+    case "SET_POSTS":
+      return {
+        ...state,
+        dataPosts: action.data,
       }
     default:
       return state;

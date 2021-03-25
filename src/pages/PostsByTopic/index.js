@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 
+import { useSelector } from 'react-redux';
+
 import {
   Container,
   TopicsList,
@@ -9,15 +11,14 @@ import {
   NavLink
 } from "../styles";
 
-import { posts, topics } from "../../posts";
-
 import RenderPosts from '../../components/RenderPosts';
 
 function PostsByTopic() {
+  const { posts, topics } = useSelector(state => state.dataPosts);
 
   useEffect(() => {
     document.title = "Blog | Posts by topic"
-  }, [])
+  }, []);
 
   return (
     <Container style={styles.container}>

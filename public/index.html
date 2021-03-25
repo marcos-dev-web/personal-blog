@@ -47,16 +47,8 @@
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
-          navigator.serviceWorker.register('worker.js').then(function(registration) {
-            console.log('pwa can run.')
-          }, function(err) {
-            console.log("pwa can't run");
-          }).catch(function(err) {
-            console.log('error...');
-          });
+          navigator.serviceWorker.register('worker.js').then(function(registration) {}, function(err) {}).catch(function(err) {});
         });
-      } else {
-        console.log('Service Worker is not supported by browser.');
       }
     </script>
   </body>
