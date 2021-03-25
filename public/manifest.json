@@ -1,6 +1,9 @@
 {
+  "dir": "ltr",
+  "lang": "pt",
   "short_name": "Person Blog",
   "name": "Person Blog | Marcos Dev Web",
+  "scope": "/",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,8 +11,11 @@
       "type": "image/x-icon"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://developerblog.herokuapp.com/",
   "display": "standalone",
   "theme_color": "#20232a",
-  "background_color": "#f2f3f5"
+  "background_color": "#f2f3f5",
+  "description": "Blog sobre tecnologia e desenvolvimento web",
+  "orientation": "any",
+  "url": "https://developerblog.herokuapp.com/"
 }
