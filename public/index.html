@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -42,5 +44,20 @@
       </p>
     </noscript>
     <main id="root"></main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('worker.js').then(function(registration) {
+            console.log('pwa can run.')
+          }, function(err) {
+            console.log("pwa can't run");
+          }).catch(function(err) {
+            console.log('error...');
+          });
+        });
+      } else {
+        console.log('Service Worker is not supported by browser.');
+      }
+    </script>
   </body>
 </html>

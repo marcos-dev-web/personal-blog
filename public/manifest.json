@@ -7,15 +7,23 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/x-icon",
+      "sizes": "64x64 32x32 24x24 16x16"
+    },
+    {
+    	"src": "logo192.png",
+    	"type": "image/png",
+    	"sizes": "192x192"
+    },
+    {
+    	"src": "logo192.png",
+    	"type": "image/png",
+    	"sizes": "512x512"
     }
   ],
-  "start_url": "https://developerblog.herokuapp.com/",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#20232a",
   "background_color": "#f2f3f5",
-  "description": "Blog sobre tecnologia e desenvolvimento web",
-  "orientation": "any",
-  "url": "https://developerblog.herokuapp.com/"
+  "description": "Blog sobre tecnologia e desenvolvimento web"
 }
